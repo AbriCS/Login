@@ -1,0 +1,37 @@
+html body {
+    margin: 0;
+    padding: 15px;
+    line-height: 1.6;
+
+}
+
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+form {
+    margin-bottom: 1rem;
+    display: block;
+    margin-top: 0em;
+    align-items: center;   
+}
+
+label {
+    display:flex;
+    margin-top: 1rem;
+}
+
+#username:hover{
+    background-color: gold;
+}
+
+#password:hover{
+    background-color: red;
+}
+
+button {
+    display:flex;
+    background-color: aquamarine;
+    margin-top: 1em;
+}
