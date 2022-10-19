@@ -6,17 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit event with Ajax</title>
     <link rel="stylesheet" href="./assets/login.css">
-
+    
 </head>
 <body>
     <h1>Submit Event</h1>
-    <form id="myForm" class="form">
-<label for="username">Username</label>
-<input type="text" name="username" id="username">
-<label for="password">Password</label>
-<input type="text" name="password" id="password">
-<button type="submit">submit</button>
-
+    <form id="form">
+      
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password">
+    
+        <button type="submit">submit</button>
+      
     </form>
+
+    <script>
+        const form = document.getElementById('form');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const payload = new FormData(form)
+            console.log([...payload]);
+
+        })
+    </script>
 </body>
 </html>
