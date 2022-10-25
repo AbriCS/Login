@@ -1,17 +1,17 @@
 function sendMail(){
     var params = {
-        name:document.getElementById("name").value ,
+        name:document.getElementById("name").value,
         email:document.getElementById("email").value,
         phone:document.getElementById("phone").value,
         message:document.getElementById("message").value,       
  };
 
- const serviceID="service_ifahzyr";
+ const serviceID="service_5tzq0ok";
  const templateID="template_j5pr8tc";
 
- emailjs.sendMail(serviceID,templateID,params)
+ emailjs.send(serviceID,templateID,params)
  .then(
-    res =>{
+    (res) =>{
        document.getElementById("name").value = "";
        document.getElementById("email").value = "";
        document.getElementById("phone").value = "";

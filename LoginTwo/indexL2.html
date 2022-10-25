@@ -5,26 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Version Two</title>
-    <link rel="stylesheet" href="./assets/css/Logintwo.css">
+    <link rel="stylesheet" href="./assets/css/Logintwo.css"/>
     <script src="./js/Logintwo.js"></script>
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     
     <script type="text/javascript">
-        (function(){emailjs.init("QPwgeJFUoSE2Y7CRy");
+        (function(){
+            emailjs.init("QPwgeJFUoSE2Y7CRy");
         })();
     </script>
 </head>
 <body>
     <div class="container">
-        <form onsubmit= "sendForm"(); reset(); return false;">
+        <form>
             <h3>Get in touch</h3>
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="insert your email" required>
             <input type="text" id="phone" placeholder="Phone No.">
             <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
-            <button type="Submit">SEND</button>
+            <button class="btn" onclick="sendMail()">SEND</button>
         </form>
     </div>
 
