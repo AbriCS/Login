@@ -16,19 +16,16 @@
          emailjs.init("QPwgeJFUoSE2Y7CRy");
         })();
     </script>
-
-
 </head>
 <body>
     <div class="container">
-        <form onsubmit= "sendEmail(); reset(); return false;">
-
+        <form onsubmit= "emailjs.sendEmail(); reset(); return false;">
             <h3>Get in touch</h3>
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="insert your email" required>
             <input type="text" id="phone" placeholder="Phone No.">
             <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
-            <button type="Submit" onclick="sendMail()">SEND</button>
+            <button type="Submit">SEND</button>
         </form>
     </div>
 
