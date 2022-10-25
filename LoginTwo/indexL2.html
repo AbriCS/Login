@@ -5,11 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/Logintwo.css">
-    <title>Document</title>
+    <title>Login Version Two</title>
+    <script src="./assets/"
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init("QPwgeJFUoSE2Y7CRy");
+})();
+</script>
+
+
 </head>
 <body>
     <div class="container">
-        <form>
+        <form onsubmit= "sendEmail(); reset(); return false;">
+
             <h3>Get in touch</h3>
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="insert your email" required>
@@ -17,7 +29,23 @@
             <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
             <button type="Submit">SEND</button>
         </form>
-
     </div>
+
+    <script src https://smtpjs.com/v3/smtp.js></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+        Host : "smtp.ionos.co.uk",
+        Username : "#",
+        Password : "#",
+        To : '#',
+        From : document.getElementById("email").value,
+        Subject : "New Contact Form Enq",
+        Body : "And this is the body"
+    }).then(
+    message => alert(message)
+    );   
+        }
+    </script>
 </body>
 </html>
