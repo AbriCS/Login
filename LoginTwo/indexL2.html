@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Version Two</title>
     <link rel="stylesheet" href="./assets/css/Logintwo.css">
-    <script src="./js/Logintwo.js"
+    <script src="./js/Logintwo.js"></script>
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
-
+    
     <script type="text/javascript">
-        (function(){
-         emailjs.init("QPwgeJFUoSE2Y7CRy");
+        (function(){emailjs.init("QPwgeJFUoSE2Y7CRy");
         })();
     </script>
 </head>
 <body>
     <div class="container">
-        <form onsubmit= "emailjs.sendEmail(); reset(); return false;">
+        <form onsubmit= "sendForm"(); reset(); return false;">
             <h3>Get in touch</h3>
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="insert your email" required>

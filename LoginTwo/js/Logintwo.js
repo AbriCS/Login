@@ -5,10 +5,11 @@ function sendMail(){
         phone:document.getElementById("phone").value,
         message:document.getElementById("message").value,       
  };
+
  const serviceID="service_ifahzyr";
  const templateID="template_j5pr8tc";
 
- emailjs.send(serviceID,templateID,params)
+ emailjs.sendMail(serviceID,templateID,params)
  .then(
     res =>{
        document.getElementById("name").value = "";
